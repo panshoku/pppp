@@ -1,0 +1,34 @@
+.pc {
+  display: block;
+  @include tab {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+html {
+  width: 375px; // レスポンシブにしてないので、ひとまず、SP用の幅で固定する
+  margin: 0 auto; // レスポンシブにしてないので、ひとまず、SP用の幅で固定する
+  color: $base-font;
+  background: $base-bg url(../image/golg-bg.jpg) no-repeat center center / cover;
+  height: 100vh;
+  background-attachment: fixed;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-family: "Noto Serif JP", serif;
+  // chromeくらいしか対応していない
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+.wrapper {
+  margin: 15px;
+}

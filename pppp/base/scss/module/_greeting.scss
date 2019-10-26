@@ -1,0 +1,16 @@
+.greeting {
+  margin: 90px 0;
+  p {
+    text-align: center;
+    line-height: 2;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 16px;
+    span {
+      margin-left: 1.3rem;
+    }
+    b {
+      font-size: 1.2em;
+    }
+  }
+}

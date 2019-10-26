@@ -1,0 +1,26 @@
+@mixin box {
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 15px;
+  margin: 0 auto 10px;
+  width: 80%;
+  @content;
+}
+
+.box-white {
+  @include box;
+  background: $box-white-bg;
+  color: $box-white-txt;
+}
+
+.box-blue {
+  @include box;
+  background: $box-blue-bg;
+  color: $box-blue-txt;
+}
+
+.box-red {
+  @include box;
+  background: $box-red-bg;
+  color: $box-red-txt;
+}

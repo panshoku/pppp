@@ -1,0 +1,22 @@
+@mixin arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow-top {
+}
+.arrow-left {
+}
+.arrow-right {
+  @include arrow;
+  border-width: 30px 0 30px 10px;
+  border-color: transparent transparent transparent $arraw-gray;
+  margin: 10px auto 8px;
+}
+.arrow-bottom {
+  @include arrow;
+  border-width: 10px 30px 0 30px;
+  border-color: $arraw-gray transparent transparent transparent;
+  margin: 10px auto 8px;
+}

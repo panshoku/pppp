@@ -1,0 +1,22 @@
+.subsc {
+  margin-bottom: 50px;
+  &-btn {
+    position: relative;
+    background: $subsc-btn-bg;
+    width: 100%;
+    padding: 20px;
+    color: $subsc-btn-txt;
+    font-size: 1.5rem;
+    svg {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+    }
+  }
+  // &:after {
+  //   position: absolute;
+  //   content: ">";
+  //   color: $subsc-btn-txt;
+  //   font-size: 1.5rem;
+  // }
+}

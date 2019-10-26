@@ -1,0 +1,10 @@
+@mixin targetIcon {
+  a[target="_blank"]:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f35d";
+    font-size: 0.8em;
+    margin: 0px 8px;
+    font-weight: 900;
+    @content;
+  }
+}

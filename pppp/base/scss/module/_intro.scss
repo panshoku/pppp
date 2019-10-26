@@ -1,0 +1,194 @@
+@keyframes arrowAnimation {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 40%;
+  }
+}
+
+@mixin intro-special {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  //   text-decoration: underline;
+  b {
+    font-size: 1.2em;
+    // vertical-align: baseline;
+  }
+  span {
+    font-size: 1.7em;
+    // vertical-align: baseline;
+    b {
+      font-size: 0.9em;
+    }
+  }
+  @content;
+}
+@mixin intro-special_txt {
+  font-size: 0.9rem;
+  span {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  @content;
+}
+
+.intro {
+  &-special {
+    border-radius: 5px;
+    border: 1px solid $intro-outer-line;
+    position: relative;
+    width: 98%;
+    margin: 3px auto;
+    background: $intro-bg;
+    &_corner {
+      width: 20px;
+      height: 20px;
+      background: $intro-outer-coner-bg;
+      position: absolute;
+      z-index: 9998;
+      &:first-child {
+        top: -1px;
+        left: -1px;
+        border-radius: 0 0 20px 0 / 0 0 20px 0;
+        border-right: 1px solid $intro-outer-coner-bd;
+        border-bottom: 1px solid $intro-outer-coner-bd;
+      }
+      &:nth-child(2) {
+        top: -1px;
+        right: -1px;
+        border-radius: 0 0 0 20px / 0 0 0 20px;
+        border-left: 1px solid $intro-outer-coner-bd;
+        border-bottom: 1px solid $intro-outer-coner-bd;
+      }
+      &:nth-child(3) {
+        bottom: -1px;
+        left: -1px;
+        border-radius: 0 20px 0 0 / 0 20px 0 0;
+        border-right: 1px solid $intro-outer-coner-bd;
+        border-top: 1px solid $intro-outer-coner-bd;
+      }
+      &:nth-child(4) {
+        bottom: -1px;
+        right: -1px;
+        border-radius: 20px 0 0 0 / 20px 0 0 0;
+        border-left: 1px solid $intro-outer-coner-bd;
+        border-top: 1px solid $intro-outer-coner-bd;
+      }
+    }
+    .intro-special {
+      border-color: $intro-inner-line;
+      padding: 20px;
+      z-index: 9999;
+      text-align: center;
+      &_box {
+        background: $intro-special-box-bg;
+        @include gradient_diag_gold;
+        border: 2px solid $intro-special-box-bd;
+        border-radius: 5px;
+        color: $intro-special-box-txt;
+        margin: 10px auto;
+        padding: 15px;
+      }
+      &_price {
+        position: relative;
+        &_batch {
+          position: absolute;
+          @include gradient_diag_gold;
+          border: 2px solid $intro-special-price-batch-bd;
+          border-radius: 50px;
+          margin: 0 auto;
+          width: 40%;
+          top: -20px;
+          left: -10px;
+          h2 {
+            color: $intro-special-price-batch-txt;
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.1;
+            padding: 12px 0;
+          }
+        }
+        &_ttl {
+          @include intro-special {
+            margin-top: 30px;
+          }
+        }
+        &_txt {
+          @include intro-special_txt {
+          }
+        }
+      }
+      &_point {
+        &_ttl {
+          @include intro-special {
+            span {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        &_txt {
+          @include intro-special_txt {
+            margin-top: 15px;
+          }
+        }
+      }
+      &_lounge {
+        @include intro-special {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-next {
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 30px;
+    span {
+      font-size: 1.6em;
+      font-weight: 700;
+      b {
+        font-size: 1.5em;
+      }
+      span {
+        font-size: 1.2em;
+      }
+    }
+    .arrow-bottom {
+      border-width: 30px 70px 0 70px;
+      border-color: $intro-next-arrow transparent transparent transparent;
+      margin: 50px auto 0;
+    }
+  }
+}
+
+@mixin point-flow {
+  font-size: 1.1rem;
+  padding: 15px;
+  width: 80%;
+  @content;
+}
+.point_flow {
+  &-left {
+    @include box;
+    @include point-flow;
+    span {
+      font-size: 1.4rem;
+      b {
+        font-size: 1.3em;
+      }
+    }
+  }
+  &-right {
+    @include box;
+    @include point-flow;
+    span {
+      font-size: 1.5rem;
+      b {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

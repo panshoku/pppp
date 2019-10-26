@@ -1,0 +1,38 @@
+@mixin ribbon_edge($locate, $space, $fill, $border-color) {
+  top: 0;
+  border-style: solid;
+}
+
+@mixin ribbon($space, $fill, $border-color) {
+  @include gradient_gold;
+  // background: $ribbon_bg;
+  color: $ribbon_color;
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 2px 15%;
+  position: relative;
+  height: 28px;
+  @content;
+  // &:before,
+  // &:after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 0px;
+  //   height: 0px;
+  //   z-index: 1;
+  //   top: 0;
+  //   border-style: solid;
+  // }
+  // &:before {
+  //   @include ribbon_edge($ribbon_left, $space, $fill, $border-color);
+  //   left: 0;
+  //   border-color: transparent transparent transparent $border-color;
+  //   border-width: $fill 0px $fill $space;
+  // }
+  // &:after {
+  //   @include ribbon_edge($ribbon_right, $space, $fill, $border-color);
+  //   right: 0;
+  //   border-color: transparent $border-color transparent transparent;
+  //   border-width: $fill $space $fill 0px;
+  // }
+}

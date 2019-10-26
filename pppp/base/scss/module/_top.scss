@@ -1,0 +1,55 @@
+.top {
+  // background: #eee;
+  text-align: center;
+  padding: 15px 10px 30px;
+  &-content {
+    &_ttl {
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      b {
+        font-weight: 400;
+        font-size: 1.1em;
+      }
+      span {
+        font-size: 1.1em;
+        @include gradient_gold;
+        border-radius: 3px;
+        color: $top-content-ttl-span-font;
+        padding: 0 10px;
+        margin-left: 4px;
+      }
+    }
+    &_slogan {
+      font-size: 3.5rem;
+      color: #be9345;
+      font-weight: 700;
+      color: $top-content-slogan;
+      text-shadow: 0.5px 0.5px 0px $top-content-slogan-shadow;
+      div {
+        display: inline-block;
+      }
+    }
+    &_txt {
+      p {
+        margin-top: 6px;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &-image {
+    margin-top: 20px;
+    text-align: left;
+    > div {
+      display: inline-block;
+      font-size: 2.7rem;
+      color: $top-image-txt;
+    }
+    img {
+      display: block;
+      width: 83%;
+      margin: 0 auto;
+    }
+  }
+}
