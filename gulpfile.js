@@ -15,7 +15,7 @@ const paths = {
   src: {
     scss: "pppp/base/scss/**/*.scss",
     js: "pppp/base/js/**/_*.js",
-    img: "pppp/base/image/*.{jpg,jpeg,png,gif,svg}"
+    img: "pppp/base/image/**/*.{jpg,jpeg,png,gif,svg}"
   },
   concat: {
     js: "pppp/base/js/"
